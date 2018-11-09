@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HorizontalScrolling</string>
+    <string name="Categories_label">Categories</string>
+    <string name="view_all_label">View all</string>
+    <string name="available_label">Available near you</string>
+    <string name="search_here">Search here</string>
+</resources>
