@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".View.MainActivity">
+
+        <EditText
+                android:layout_width="@dimen/dp320"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/search_bar"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/dp7"
+                android:hint="@string/search_here"
+                android:elevation="@dimen/dp10"
+                android:padding="@dimen/dp15"
+                android:drawableRight="@mipmap/ic_search"
+                android:drawableEnd="@mipmap/ic_search"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/rounded_search_bar"/>
+
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:id="@+id/photos"
+                android:layout_marginTop="@dimen/dp5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_bar"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <LinearLayout
+                android:id="@+id/LinearHeader"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/photos"
+                android:layout_height="@dimen/dp40">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="@dimen/dp5"
+                      android:textSize="@dimen/sp20"
+                      android:textColor="@android:color/black"
+                      android:text="@string/Categories_label"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="@dimen/dp5"
+                      android:layout_weight="1"
+                      android:textSize="@dimen/sp15"
+                      android:textColor="#ff9933"
+                      android:gravity="end"
+                      android:text="@string/view_all_label"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/categories"
+                app:layout_constraintTop_toBottomOf="@id/LinearHeader"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:id="@+id/LinearHeader2"
+                      app:layout_constraintTop_toBottomOf="@id/categories"
+                      android:layout_height="@dimen/dp40">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="@dimen/dp5"
+                      android:textSize="@dimen/sp20"
+                      android:textColor="@android:color/black"
+                      android:text="@string/available_label"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:id="@+id/books"
+                app:layout_constraintTop_toBottomOf="@id/LinearHeader2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

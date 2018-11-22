@@ -15,11 +15,11 @@ import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.row_categories.view.*
 
 
-class CategoriesAdapter(private val mContext: Context, names: ArrayList<String>, imageUrls: ArrayList<String>) :
+class CategoriesAdapter(private val mContext: Context, names: ArrayList<String>, imageUrls: ArrayList<Int>) :
     RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
     private var mNames = ArrayList<String>()
-    private var mImageUrls = ArrayList<String>()
+    private var mImageUrls = ArrayList<Int>()
 
     init {
         mNames = names
